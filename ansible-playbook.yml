@@ -15,9 +15,9 @@
     command : sudo systemctl start docker
     become : yes
     become_user : root
-  - name : stop existing containers
-    shell: docker stop $(docker ps -a -q)
-  - name : delete all containers
-    shell: docker rm $(docker ps -a -q)
+  #- name : stop existing containers
+  #  shell: docker stop $(docker ps -a -q)
+  #- name : delete all containers
+  # shell: docker rm $(docker ps -a -q)
   - name: Deploy Docker Container
-    command: docker run -itd -p 8088:8081 vikuldocker/insuranceproject:1.0
+    command: docker run -itd -p 8089:8081 aniketvishe/insuranceproject:1.0
